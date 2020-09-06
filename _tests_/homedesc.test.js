@@ -1,4 +1,4 @@
-const app = require('../server');
+const app = require('../server/app');
 const supertest = require('supertest');
 const superagent = require('superagent');
 const randomId = require('randomatic');
@@ -27,8 +27,8 @@ describe('Integration Testing for Home Description module server and DB', () => 
 
   test('Check total number of collections in the DB to be 100', (done) => {
     request.get('/rooms')
-      .expect('Content-Type', /json/)
       .then((response) => {
+        console.log('Response: ', response.body)
         expect(response.statusCode).toBe(200);
         expect(response.body.id).toBeUndefined();
         expect(response.body.length).toEqual(100);
