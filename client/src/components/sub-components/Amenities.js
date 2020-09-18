@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SvgAc from './svg/amenitySvgs/SvgAc';
 import SvgDryer from './svg/amenitySvgs/SvgDryer';
 import SvgEssential from './svg/amenitySvgs/SvgEssential';
@@ -11,8 +11,13 @@ import SvgParking from './svg/amenitySvgs/SvgParking';
 import SvgTv from './svg/amenitySvgs/SvgTv';
 import SvgWasher from './svg/amenitySvgs/SvgWasher';
 import SvgWifi from './svg/amenitySvgs/SvgWifi';
+import { Modal, ModalHeader, ModalBody } from 'reactstrap';
+import AmenitiesModal from './AmenitiesModal';
 
 const Amenities = ({ homeDesc }) => {
+  const [modal, setModal] = useState(false);
+  const toggle = () => setModal(!modal);
+
   return (
     <>
       <hr></hr>
@@ -136,8 +141,15 @@ const Amenities = ({ homeDesc }) => {
 
         </div>
         <div className="row">
-        <button className="see-amenities">See All 26 Amenities</button>
+          <button className="see-amenities" onClick={toggle}>Show All 43 Amenities</button>
+          <Modal isOpen={modal} toggle={toggle}>
+          <ModalHeader toggle={toggle}>Amenities</ModalHeader>
+            <ModalBody>
+              <AmenitiesModal homeDesc={homeDesc} />
+            </ModalBody>
+          </Modal>
         </div>
+        <br></br>
         </>
       }
     </>
