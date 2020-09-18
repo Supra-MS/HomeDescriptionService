@@ -5,11 +5,6 @@ body {
   color: #595858;
 }
 
-.container {
-  margin: auto !important;
-  width: 90% !important;
-}
-
 .hl-title {
   color: black;
   margin-left: 35px;
@@ -65,15 +60,19 @@ svg.svg-desc, svg.svg-amenities {
   text-decoration: line-through;
 }
 
-button.read-more {
+button.read-more, a.read-more {
   border: none;
   font-weight: 900;
   text-decoration: underline;
 }
 
-.read-more:hover {
+.read-more:hover, a.read-more:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+a.read-more {
+  color: black !important;
 }
 
 svg {
@@ -95,4 +94,28 @@ button.see-amenities {
 
 button.see-amenities:hover {
   cursor: pointer;
+}
+
+.overview-title {
+  color: black;
+  font-size: 32px;
+}
+
+img.host-img {
+  border-radius: 50%;
+  filter: grayscale(30%);
+}
+
+img, svg.super-host{
+  display: inline-block !important;
+  position: relative;
+  margin-left: -15px;
+}
+
+.super-host {
+  margin-top: 50px;
+}
+
+.nav-li {
+  padding: 0px 10px;
 }

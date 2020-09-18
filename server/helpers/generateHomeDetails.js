@@ -1,6 +1,6 @@
 var faker = require('faker');
 var choosePropertyType = require('./choosePropertyType');
-var { selectedPlaceType, placeTypeLogic } = require('./choosePlaceTypeWithLogic');
+var { placeTypeLogic, choosePlaceType } = require('./choosePlaceTypeWithLogic');
 var descriptionLogic = require('./descriptionLogic');
 var studioLogic = require('./studioLogic');
 var cleanLogic = require('./cleanLogic');
@@ -9,7 +9,7 @@ var generateHomeDetails = () => {
   var homeDescriptions = [];
 
   for (var i = 1; i < 101; i++) {
-
+    let selectedPlaceType = choosePlaceType();
     let placeTypeObj = placeTypeLogic(selectedPlaceType);
     let descObj = descriptionLogic();
     let studioObj = studioLogic();

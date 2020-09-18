@@ -151,6 +151,7 @@ app.get('/rooms/:roomId/amenities', (req, res) => {
 });
 
 app.post('/rooms', (req, res) => {
+  console.log('Check')
   HomeDescription.create({
     _id: req.body._id,
     amenities_section: {},

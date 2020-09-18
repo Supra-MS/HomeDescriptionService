@@ -61,7 +61,7 @@ const Highlights = ({ homeDesc, hostInfo, superHostText }) => {
             <SvgEnhancedClean />
             <p className="hl-title"><strong>Enhanced Clean</strong></p>
             <p className="hl-mini-title">This host committed to a rigorous cleaning protocol developed with leading health and hospitality experts.
-            <a>Learn more</a>
+            <a className="read-more">Learn more</a>
             </p>
 
           </span>

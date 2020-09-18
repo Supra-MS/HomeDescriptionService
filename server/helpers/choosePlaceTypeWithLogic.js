@@ -5,9 +5,7 @@ var placeType = ['Entire place', 'Private room', 'Shared room'];
 var choosePlaceType = () => {
   var index = Math.floor(Math.random() * placeType.length);
   return placeType[index];
-}
-
-var selectedPlaceType = choosePlaceType();
+};
 
 var placeTypeLogic = (placeType) => {
   let is_entire_home, just_bath, is_private_bath, is_shared_bath;
@@ -36,6 +34,6 @@ var placeTypeLogic = (placeType) => {
 };
 
 module.exports = {
-  selectedPlaceType,
+  choosePlaceType,
   placeTypeLogic
 }
