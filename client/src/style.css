@@ -57,6 +57,7 @@ svg.svg-desc, svg.svg-amenities {
 }
 
 .no-amenity {
+  margin-left: 35px;
   text-decoration: line-through;
 }
 
@@ -90,6 +91,7 @@ button.see-amenities {
   padding-right: 30px;
   border-radius: 10px;
   font-weight: 900;
+  outline: none;
 }
 
 button.see-amenities:hover {
@@ -119,3 +121,19 @@ img, svg.super-host{
 .nav-li {
   padding: 0px 10px;
 }
+
+.modal-title {
+  color: black;
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+.modal-content {
+  width: 170% !important;
+}
+
+.amenity-modal {
+  margin: 10px 0px 35px 35px;
+  font-weight: bold;
+}
+
