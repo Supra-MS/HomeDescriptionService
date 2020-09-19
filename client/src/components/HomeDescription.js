@@ -46,7 +46,7 @@ class HomeDescription extends React.Component {
 
   getHostInfoById(id) {
     console.log('host id: ', id);
-    http.get(`${hostServerUrl}/hostInfo/${id}`)
+    http.get(`${serverUrl}/hostInfo/${id}`)
       .then(response => {
         console.log('GET response from the server by hostInfo Id: ', response.data);
         let hostInfoObj = {
