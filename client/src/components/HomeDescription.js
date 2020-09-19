@@ -6,9 +6,8 @@ import Description from './sub-components/Description';
 import Amenities from './sub-components/Amenities';
 import SleepingArrangements from './sub-components/SleepingArrangements';
 
-// var serverUrl = 'http://ec2-54-215-129-94.us-west-1.compute.amazonaws.com:3000';
-var serverUrl = 'http://localhost:3002';
-var hostServerUrl = 'http://localhost:3006';
+var serverUrl = 'http://ec2-3-101-118-169.us-west-1.compute.amazonaws.com/:3000';
+// var serverUrl = 'http://localhost:3002';
 
 class HomeDescription extends React.Component {
   constructor(props) {
@@ -47,8 +46,7 @@ class HomeDescription extends React.Component {
 
   getHostInfoById(id) {
     console.log('host id: ', id);
-    // http.get(`${serverUrl}/hostInfo/${id}`)
-    http.get(`${hostServerUrl}/hostInfo/${id}`)
+    http.get(`${serverUrl}/hostInfo/${id}`)
       .then(response => {
         console.log('GET response from the server by hostInfo Id: ', response.data);
         let hostInfoObj = {
