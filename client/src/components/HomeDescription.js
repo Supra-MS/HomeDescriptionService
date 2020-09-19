@@ -7,7 +7,6 @@ import Amenities from './sub-components/Amenities';
 import SleepingArrangements from './sub-components/SleepingArrangements';
 
 var serverUrl = 'http://ec2-13-56-20-100.us-west-1.compute.amazonaws.com:3000';
-var hostServerUrl = 'http://ec2-13-56-20-100.us-west-1.compute.amazonaws.com:3006';
 // var serverUrl = 'http://localhost:3002';
 
 class HomeDescription extends React.Component {
