@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const mongoUri = 'mongodb://localhost/homeDesc';
+// const mongoUri = 'mongodb://localhost/homeDesc';
+const mongoUri = `mongodb+srv://admin:admin@cluster0.9j0yc.mongodb.net/homeDescDB`;
 // const { MONGO_CLOUD_USERNAME, MONGO_CLOUD_PASSWORD, DB_NAME } = require('../../config/config');
 // const mongoUri = `mongodb+srv://${MONGO_CLOUD_USERNAME}:${MONGO_CLOUD_PASSWORD}@cluster0.9j0yc.mongodb.net/${DB_NAME}`;
 
