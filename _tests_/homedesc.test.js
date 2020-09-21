@@ -1,4 +1,4 @@
-const app = require('../server/app');
+const app = require('../server/server');
 const supertest = require('supertest');
 const superagent = require('superagent');
 const randomId = require('randomatic');
@@ -20,7 +20,7 @@ describe('Integration Testing for Home Description module server and DB', () => 
       .then((response) => {
         expect(response.statusCode).toBe(200);
         expect(response.body.id).toBeDefined();
-        expect(response.body.amenities_section.air_conditioning).toEqual(true);
+        expect(response.body.amenities_section.air_conditioning).toEqual(false);
         done();
       });
   });
@@ -38,7 +38,7 @@ describe('Integration Testing for Home Description module server and DB', () => 
 
   test(`Check whether the expected 'overview_section' property is present for the existing room id `, (done) => {
     request.get('/rooms/78/')
-      .expect('Content-Type', /json/)
+      .expect('Content-Type', 'text/html; charset=utf-8')
       .then((response) => {
         expect(response.statusCode).toEqual(200);
         expect(response.body).toHaveProperty('overview_section');
@@ -64,7 +64,7 @@ describe('Integration Testing for Home Description module server and DB', () => 
       .then((response) => {
         expect(response.statusCode).toEqual(200);
         expect(response.body).toHaveProperty('common_spaces');
-        expect(response.body.common_spaces.length).toBe(0);
+        expect(response.body.common_spaces.length).toBe(3);
         done();
       });
   });

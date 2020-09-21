@@ -20,26 +20,26 @@ const Overview = ({ homeDesc, hostInfo, hostPic }) => {
             <div className="overview-title">{placeType} {propertyType} hosted by {hostInfo.hostName}</div>
 
             <div className="navbar navbar-expand">
-              <div className="navbar-nav mr-auto">
-                <li className="navbar-item">
-                  <div className="nav-li">• {homeDesc.overview_section.no_of_guests} guests</div>
-                </li>
+              <ul className="navbar-nav mr-auto">
+                  <li className="navbar-item">
+                    <div className="nav-li">• {homeDesc.overview_section.no_of_guests} guests</div>
+                  </li>
 
-                <li className="navbar-item">
-                  <div className="nav-li">• {homeDesc.overview_section.no_of_bedrooms} bedrooms</div>
-                </li>
+                  <li className="navbar-item">
+                    <div className="nav-li">• {homeDesc.overview_section.no_of_bedrooms} bedrooms</div>
+                  </li>
 
-                <li className="navbar-item">
-                  <div className="nav-li">• {homeDesc.overview_section.no_of_beds} beds</div>
-                </li>
+                  <li className="navbar-item">
+                    <div className="nav-li">• {homeDesc.overview_section.no_of_beds} beds</div>
+                  </li>
 
-                <li className="navbar-item">
-                  {placeType.toLowerCase() === 'entire' && <div className="nav-li">• {homeDesc.overview_section.no_of_bath} bath</div>}
-                  {placeType.toLowerCase() === 'private' && <div className="nav-li">• {homeDesc.overview_section.no_of_bath} private bath</div>}
-                  {placeType.toLowerCase() === 'shared' && <div className="nav-li">• {homeDesc.overview_section.no_of_bath} shared bath</div>}
+                  <li className="navbar-item">
+                    {placeType.toLowerCase() === 'entire' && <div className="nav-li">• {homeDesc.overview_section.no_of_bath} bath</div>}
+                    {placeType.toLowerCase() === 'private' && <div className="nav-li">• {homeDesc.overview_section.no_of_bath} private bath</div>}
+                    {placeType.toLowerCase() === 'shared' && <div className="nav-li">• {homeDesc.overview_section.no_of_bath} shared bath</div>}
 
-                </li>
-              </div>
+                  </li>
+                </ul>
             </div>
 
           </>
@@ -50,7 +50,7 @@ const Overview = ({ homeDesc, hostInfo, hostPic }) => {
       <div className="col-md-3">
         {hostInfo.hasProfilePic && hostInfo.isSuperHost ?
           <div>
-            <img className="host-img" src={hostPic} height="90px" width="90px"></img>
+            <img className="host-img" src={hostPic} height="90px" width="90px" alt="host-img"></img>
             <SvgSuperHost />
           </div>
           : (!hostInfo.hasProfilePic && hostInfo.isSuperHost) ?
