@@ -1,4 +1,5 @@
 const express = require('express');
+const responseTime = require('response-time');
 const path = require('path');
 const bodyParser = require('body-parser');
 const compression = require('compression');
@@ -13,6 +14,7 @@ app.use(cors());
 app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(responseTime());
 
 app.use(express.static(__dirname + '/../client/dist'));
 
@@ -38,7 +40,7 @@ app.get('/rooms', (req, res) => {
 });
 
 app.get('/rooms/:roomId', (req, res) => {
-  console.log('Parameter send by id in the req: ', req.params);
+  console.log('Parameter send by id in the req: ', req.params, req.query);
   HomeDescription.findById(req.params.roomId)
     .then(data => {
       if (!data) {
