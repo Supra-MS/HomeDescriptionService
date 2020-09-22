@@ -203,3 +203,5 @@ const AmenitiesModal = ({ homeDesc }) => {
 };
 
 export default AmenitiesModal;
+
+/* DRY: Need refactor */
