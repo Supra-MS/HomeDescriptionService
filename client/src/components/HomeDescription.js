@@ -34,11 +34,11 @@ class HomeDescription extends React.Component {
     let queryString = window.location.search;
     if (!queryString.length) {
       let pathname = window.location.pathname.split('/').pop();
-      this.getHostInfoById(pathname);
+      // this.getHostInfoById(pathname);
       this.getHomeDescById(pathname);
       this.getProfilePicture(pathname);
     } else {
-      this.getHostInfoById(queryString.split('?').pop());
+      // this.getHostInfoById(queryString.split('?').pop());
       this.getHomeDescById(queryString.split('?').pop());
       this.getProfilePicture(queryString.split('?').pop());
     }
