@@ -1,5 +1,8 @@
 ## FEC Project: AirBnB Product detail clone page
+---
+![](homeDescService-AWS.gif)
 
+---
 > Home Description service built based on MERN stack.
 
 Runs the app in development mode.
